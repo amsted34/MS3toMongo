@@ -32,3 +32,37 @@
 \\Mac\Dropbox\Website\playground_2019\namedPipeExample - CSharp\namedPipeExample - CSharp\bin\Debug\MongoDB.Bson.xml
 \\Mac\Dropbox\Website\playground_2019\namedPipeExample - CSharp\namedPipeExample - CSharp\bin\Debug\MongoDB.Driver.xml
 \\Mac\Dropbox\Website\playground_2019\namedPipeExample - CSharp\namedPipeExample - CSharp\bin\Debug\MongoDB.Driver.Core.xml
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\namedPipeExample - CSharp.exe.config
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\namedPipeExample - CSharp.exe
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\namedPipeExample - CSharp.pdb
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\BaseOutput.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\DnsClient.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\ICPOutput.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\LoadMCAOI.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\MongoDB.Bson.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\MongoDB.Driver.Core.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\MongoDB.Driver.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\NamedPipeWrapper.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\SetupCtrlLib.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\System.Buffers.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\INIFileHandler.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\MultiCamPaths.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\DnsClient.xml
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\MongoDB.Bson.xml
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\MongoDB.Driver.xml
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\MongoDB.Driver.Core.xml
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\NamedPipeWrapper.pdb
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\es\BaseOutput.resources.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\fr\BaseOutput.resources.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\es\ICPOutput.resources.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\de\LoadMCAOI.resources.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\es\LoadMCAOI.resources.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\fr\LoadMCAOI.resources.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Debug\ms\LoadMCAOI.resources.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\obj\Debug\namedPipeExample - CSharp.csprojAssemblyReference.cache
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\obj\Debug\namedPipeExample - CSharp.exe.config
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\obj\Debug\namedPipeExample - CSharp.csproj.CoreCompileInputs.cache
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\obj\Debug\namedPipeExample - CSharp.csproj.CopyComplete
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\obj\Debug\namedPipeExample - CSharp.exe
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\obj\Debug\namedPipeExample - CSharp.pdb

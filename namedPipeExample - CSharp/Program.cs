@@ -16,31 +16,44 @@ namespace MS3toMongo
     class Program
     {
 
-        static MongoClient client = new MongoClient("mongodb://amsted34:pinttw68@mongotest-shard-00-00-fxdpg.azure.mongodb.net:27017,mongotest-shard-00-01-fxdpg.azure.mongodb.net:27017,mongotest-shard-00-02-fxdpg.azure.mongodb.net:27017/test?ssl=true&replicaSet=Mongotest-shard-0&authSource=admin&retryWrites=true");
+       // static MongoClient client = new MongoClient("mongodb://amsted34:pinttw68@mongotest-shard-00-00-fxdpg.azure.mongodb.net:27017,mongotest-shard-00-01-fxdpg.azure.mongodb.net:27017,mongotest-shard-00-02-fxdpg.azure.mongodb.net:27017/test?ssl=true&replicaSet=Mongotest-shard-0&authSource=admin&retryWrites=true");
+       static MongoClient client = new MongoClient("mongodb://localhost:27017"); 
         static IMongoDatabase db = client.GetDatabase("MS3DataDB");
         static IMongoCollection<MS3Data> MS3Collection = db.GetCollection<MS3Data>("DATA");
 
         //Entry Point
-        static void Main(string[] args)
+        static  void Main(string[] args)
         {
 
             UdpClient socket = new UdpClient(27000);
             socket.BeginReceive(new AsyncCallback(OnUdpData), socket);
             Console.ReadKey();
-
+           
         }
 
-        public static async Task<string> CreateOne(MS3Data mS3LiveDataCollection)
+      
+
+        public static async Task CreateOne(MS3Data mS3LiveData)
         {
-            await MS3Collection.InsertOneAsync(mS3LiveDataCollection);
-            return "inserted";
+            var task = Task.CurrentId; 
+            var st2 = new Stopwatch();
+            st2.Start();
+           await MS3Collection.InsertOneAsync(mS3LiveData);
+            Console.WriteLine("-----------------------------------------------");
+            Console.WriteLine($"Insert Method : Inserted callback in {st2.Elapsed.TotalMilliseconds}ms \nusing taskNum: {task} \nreturned: \n {mS3LiveData.ToJson()}");
+            Console.WriteLine("*******************************************");
+            Console.WriteLine("*******************************************");
+            Console.WriteLine("*******************************************");
+
         }
 
         static void OnUdpData(IAsyncResult result)
         {
-            WriteConcern WCValue = new WriteConcern(1);
-            client.WithWriteConcern(WCValue);
 
+
+            //Mongo Write defs + StopWatch for some diagnostics
+            WriteConcern WCValue = new WriteConcern(0);
+            client.WithWriteConcern(WCValue);
             var st1 = new Stopwatch();
             st1.Start();
             UdpClient socket = result.AsyncState as UdpClient;
@@ -53,21 +66,22 @@ namespace MS3toMongo
             var splitMessage = sMessage.Split(',');
             var data = splitMessage[4].Split(';');
 
-            List<BsonDocument> dataList = new List<BsonDocument>(); 
+            List<BsonDocument> camRead = new List<BsonDocument>(); 
             
                 foreach (var read in data)
             {
-                var newData = read.Split('-');
+                
+                var newData = read.TrimEnd().Split('-');
                 var bdocument = new BsonDocument(newData[0], newData[1]);
-                dataList.Add(bdocument);
+                camRead.Add(bdocument);
             };
 
 
-            var LISData = new MS3Data(splitMessage[0], splitMessage[1], Convert.ToInt32(splitMessage[2]), splitMessage[3], dataList, DateTime.Now);
+            var LISData = new MS3Data(splitMessage[0], splitMessage[1], Convert.ToInt32(splitMessage[2]), splitMessage[3], camRead);
 
-            CreateOne(LISData);
+          Task.Factory.StartNew( () =>CreateOne(LISData));
 
-            Console.WriteLine(st1.Elapsed.TotalMilliseconds);
+            Console.WriteLine($"UDP EVENT : UDP + Mongo Insert Elapsed: {st1.Elapsed.TotalMilliseconds}ms");
             socket.BeginReceive(new AsyncCallback(OnUdpData), socket);
             
         }
