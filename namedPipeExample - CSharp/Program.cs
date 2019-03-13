@@ -32,23 +32,42 @@ namespace MS3toMongo
         }
 
         //Insert Method to MongoDb called by OnUDP line 80 via task.factory.startNew()
-        public static async Task CreateOne(MS3Data mS3LiveData)
+        public static async Task CreateOne( string sMessage)
         {
             var task = Task.CurrentId; 
             var st2 = new Stopwatch();
             st2.Start();
-           await MS3Collection.InsertOneAsync(mS3LiveData);
+
+            //split the message before creating our document to be sent to Mongo
+            var splitMessage = sMessage.Split(',');
+            var data = splitMessage[4].Split(';');
+            
+
+            //Create a new list for camRead Data
+            List<BsonDocument> camRead = new List<BsonDocument>();
+
+            //formating the split data and adding to the Document List list<bsonDocument>
+            foreach (var read in data)
+            {
+                var newData = read.TrimEnd().Split('-');
+                var bdocument = new BsonDocument(newData[0], newData[1]);
+                camRead.Add(bdocument);
+            };
+
+            //create a new instance of the MS3Data object with the relevant information that will make our bson Object
+            var LISData = new MS3Data(splitMessage[0], splitMessage[1], Convert.ToInt32(splitMessage[2]), splitMessage[3], camRead);
+
+            await MS3Collection.InsertOneAsync(LISData);
             Console.WriteLine($"---------------------------------------------------------------------------");
-            Console.WriteLine($"Insert Method : Inserted callback in {st2.Elapsed.TotalMilliseconds}ms \nusing taskNum: {task} \nreturned: \n {mS3LiveData.ToJson()}");
+            Console.WriteLine($"Insert Method : Inserted callback in {st2.Elapsed.TotalMilliseconds}ms \nusing taskNum: {task} \nreturned: \n {LISData.ToJson()}");
             Console.WriteLine("**********************************************************************");
             Console.WriteLine("**********************************************************************");
             Console.WriteLine("**********************************************************************");
 
-        }
+        } //End CreateOne*********************
 
         static void OnUdpData(IAsyncResult result)
         {
-
             //Mongo Write defs + StopWatch for some diagnostics
             WriteConcern WCValue = new WriteConcern(0);
             client.WithWriteConcern(WCValue);
@@ -63,34 +82,17 @@ namespace MS3toMongo
             //get Message in String
             var sMessage = Encoding.ASCII.GetString(message);
            
-            //split the message before creating our document to be sent to Mongo
-            var splitMessage = sMessage.Split(',');
-            var data = splitMessage[4].Split(';');
-
-            //Create a new list for camRead Data
-            List<BsonDocument> camRead = new List<BsonDocument>(); 
-            
-            //formating the split data and adding to the Document List list<bsonDocument>
-                foreach (var read in data)
-            {
-                
-                var newData = read.TrimEnd().Split('-');
-                var bdocument = new BsonDocument(newData[0], newData[1]);
-                camRead.Add(bdocument);
-            };
-
-            //create a new instance of the MS3Data object with the relevant information that will make our bson Object
-            var LISData = new MS3Data(splitMessage[0], splitMessage[1], Convert.ToInt32(splitMessage[2]), splitMessage[3], camRead);
-
+          
                // create a task to call createOne method which hold the insert statement to Mongo
-          Task.Factory.StartNew( () =>CreateOne(LISData));
+            Task.Factory.StartNew( () =>CreateOne(sMessage));
+
             Console.ForegroundColor = ConsoleColor.Green; 
-            Console.WriteLine($"-----------------------------------{splitMessage[2]}-------------------------------------");
+            Console.WriteLine($"-----------------------------------ENDUDP-------------------------------------");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine($"UDP EVENT : UDP + Mongo Insert Elapsed: {st1.Elapsed.TotalMilliseconds}ms");
+            Console.WriteLine($"UDP EVENT :  Elapsed: {st1.Elapsed.TotalMilliseconds}ms");
             socket.BeginReceive(new AsyncCallback(OnUdpData), socket);
             
-        }
+        }// end OnUdpData *************************
 
 
 

@@ -1,0 +1,33 @@
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\namedPipeExample - CSharp.exe.config
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\namedPipeExample - CSharp.exe
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\namedPipeExample - CSharp.pdb
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\BaseOutput.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\DnsClient.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\ICPOutput.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\LoadMCAOI.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\MongoDB.Bson.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\MongoDB.Driver.Core.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\MongoDB.Driver.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\NamedPipeWrapper.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\SetupCtrlLib.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\System.Buffers.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\System.Runtime.InteropServices.RuntimeInformation.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\INIFileHandler.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\MultiCamPaths.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\DnsClient.xml
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\MongoDB.Bson.xml
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\MongoDB.Driver.xml
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\MongoDB.Driver.Core.xml
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\NamedPipeWrapper.pdb
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\es\BaseOutput.resources.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\fr\BaseOutput.resources.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\es\ICPOutput.resources.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\de\LoadMCAOI.resources.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\es\LoadMCAOI.resources.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\fr\LoadMCAOI.resources.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\bin\Release\ms\LoadMCAOI.resources.dll
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\obj\Release\namedPipeExample - CSharp.exe.config
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\obj\Release\namedPipeExample - CSharp.csproj.CoreCompileInputs.cache
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\obj\Release\namedPipeExample - CSharp.csproj.CopyComplete
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\obj\Release\namedPipeExample - CSharp.exe
+\\Mac\Dropbox\Website\playground_2019\MS3ToMongo\namedPipeExample - CSharp\obj\Release\namedPipeExample - CSharp.pdb
