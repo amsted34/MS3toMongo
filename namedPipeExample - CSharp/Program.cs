@@ -34,7 +34,7 @@ namespace MS3toMongo
         //Insert Method to MongoDb called by OnUDP line 80 via task.factory.startNew()
         public static async Task CreateOne( string sMessage)
         {
-            var task = Task.CurrentId; 
+            var task = Task.CurrentId;
             var st2 = new Stopwatch();
             st2.Start();
 
@@ -58,6 +58,8 @@ namespace MS3toMongo
             var LISData = new MS3Data(splitMessage[0], splitMessage[1], Convert.ToInt32(splitMessage[2]), splitMessage[3], camRead);
 
             await MS3Collection.InsertOneAsync(LISData);
+
+            
             Console.WriteLine($"---------------------------------------------------------------------------");
             Console.WriteLine($"Insert Method : Inserted callback in {st2.Elapsed.TotalMilliseconds}ms \nusing taskNum: {task} \nreturned: \n {LISData.ToJson()}");
             Console.WriteLine("**********************************************************************");
@@ -85,11 +87,11 @@ namespace MS3toMongo
           
                // create a task to call createOne method which hold the insert statement to Mongo
             Task.Factory.StartNew( () =>CreateOne(sMessage));
-
+            var task = Task.CurrentId;
             Console.ForegroundColor = ConsoleColor.Green; 
-            Console.WriteLine($"-----------------------------------ENDUDP-------------------------------------");
+            Console.WriteLine($"------------------------------UDP-------------------------------------");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine($"UDP EVENT :  Elapsed: {st1.Elapsed.TotalMilliseconds}ms");
+            Console.WriteLine($"UDP EVENT :  Elapsed: {st1.Elapsed.TotalMilliseconds}ms - TASK: {task}");
             socket.BeginReceive(new AsyncCallback(OnUdpData), socket);
             
         }// end OnUdpData *************************
